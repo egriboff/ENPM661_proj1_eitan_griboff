@@ -52,20 +52,20 @@ def moves(puzzle):
 
 # Moves the blank tile in the puzzle.
 def move(puzzle, direction):
-    # Creates a copy of the new_puzzle to change it.
+    # Creates a copy of the new_puzzle so that it can be changed.
     new_puzzle = puzzle.copy()
     pos = puzzle.index(0)
-    # Position blank tile will move to.
+    # Give the position that the blank tile will now be at.
     new_pos = pos + direction
-    # Swap tiles.
+    # Swap the tiles.
     new_puzzle[pos], new_puzzle[new_pos] = new_puzzle[new_pos], new_puzzle[pos]
 
     return new_puzzle  # Return the new state of the puzzle, so the next available move can be found
 
 
-# Creates the database.
+# Creates the database of states needed to progress from initial state to final state.
 def solve_puzzle():
-    # Initializes a starting state, queue and visited list.
+    # Initializes a starting state, queue, visited states list, and repeated states list.
     start = init_state_5
     queue = deque([[start, 0]])
     node_states = []  # Create an array to hold the steps taken from beginning to final state
