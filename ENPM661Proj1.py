@@ -10,7 +10,6 @@ init_state_5 = [1, 6, 2, 3, 9, 5, 7, 4, 0, 10, 11, 8, 13, 14, 15, 12]
 # Final state of the puzzle
 final_state = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0]
 
-
 # Finds the possible moves for the blank tile.
 def moves(puzzle):
     pos = puzzle.index(0)  # Find where 0 is in the current state of the puzzle
