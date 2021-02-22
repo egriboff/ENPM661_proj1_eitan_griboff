@@ -17,13 +17,13 @@ def moves(puzzle):
     if pos == 0:  # If the blank tile is in the 0th position of the state array, the tile can make the following moves
         possible_moves = [1, 4]  # If at the 0 position, the blank tile can move either right (+1) or down (+4)
     elif pos == 1:
-        possible_moves = [1, 4, -1]
+        possible_moves = [1, 4, -1]  # -1 will move the blank tile to the left in the puzzle
     elif pos == 2:
         possible_moves = [1, 4, -1]
     elif pos == 3:
         possible_moves = [-1, 4]
     elif pos == 4:
-        possible_moves = [-4, 1, 4]
+        possible_moves = [-4, 1, 4]  # -4 will move the blank tile upward in the puzzle
     elif pos == 5:
         possible_moves = [-4, 4, 1, -1]
     elif pos == 6:
